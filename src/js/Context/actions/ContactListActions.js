@@ -1,8 +1,8 @@
 
 
 export const ADD_CONTACT = 'ADD_CONTACT';
-{/*export const EDIT_CONTACT = 'EDIT_CONTACT';
-export const REMOVE_CONTACT = 'REMOVE_CONTACT';*/}
+//export const EDIT_CONTACT = 'EDIT_CONTACT';
+//export const REMOVE_CONTACT = 'REMOVE_CONTACT';
 
 
 export const contactListActions = {
@@ -13,7 +13,7 @@ export const contactListActions = {
     })
 
 
-    {/*EDIT_CONTACT:(data)=>({
+    /*EDIT_CONTACT:(data)=>({
         type: EDIT_CONTACT,
         data
 
@@ -23,5 +23,5 @@ export const contactListActions = {
         type: REMOVE_CONTACT,
         data
 
-    })*/}
-}
+    })*/
+};

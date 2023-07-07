@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 
-import { ADD_CONTACT } from '../context/actions/contactListActions.js'
+import { ADD_CONTACT } from './actions/ContactListActions.js'
 
 export const Context = createContext();
 

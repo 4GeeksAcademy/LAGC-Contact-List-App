@@ -7,7 +7,7 @@ import ContactListPage from "./pages/ContactListPage.jsx";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
-import ContextProvider from '../js/context/Provider.jsx'
+import ContextProvider from "./Context/Provider.jsx";
 
 //create your first component
 const Layout = () => {

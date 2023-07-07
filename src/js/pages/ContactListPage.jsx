@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import { Context } from '../context/Provider.jsx'
+import { Context } from '../Context/Provider.jsx'
 
-import { contactListActions } from '../context/actions/ContactListActions.js'
+import { contactListActions } from '../Context/actions/ContactListActions.js'
 
 export default function ContactListPage() {
 
