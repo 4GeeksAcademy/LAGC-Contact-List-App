@@ -13,10 +13,12 @@ export default function ContactListPage() {
             <h1>Contact List Page</h1>
 
             <button onClick={() => dispatch(contactListActions.ADD_CONTACT({ name: 'added something else' }))}>Add test contact</button>
+            {/*<button onClick={() => dispatch(contactListActions.ADD_CONTACT({ name: 'added something else' }))}>Add test contact</button>*/}
 
             {state.contacts.map((contact) => (
                 <div>
                     <p>{contact.name}</p>
+
                 </div>
             ))}
 
