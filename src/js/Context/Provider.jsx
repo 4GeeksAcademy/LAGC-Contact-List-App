@@ -34,7 +34,7 @@ const initialState = {
             name: 'Elvis Hernandez',
             email: 'testemail@gmail.com',
             phone: 'xxx-xxx-xxxxx',
-            addresss: 'test addresss'
+            address: 'test addresss'
         }
     ]
 }

@@ -1,3 +1,33 @@
 /* 
     General Styles
 */
+.imagen img {
+    border-radius: 100%;
+    border: solid lightgray 1px;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 5px;
+    /* padding: 10px; */
+
+}
+.contact{
+    border: solid lightgray 1px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.info{
+    margin-left: 20px;
+}
+.image{
+    padding: 10px;
+}  
+
+.righthicon{
+    padding-right: 10px;
+
+}
