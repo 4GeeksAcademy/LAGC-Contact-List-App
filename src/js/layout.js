@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import ContactListPage from "./pages/ContactListPage.jsx";
-
+import AddContact from "./pages/AddContact.jsx";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -23,6 +23,7 @@ const Layout = () => {
 						<Navbar />
 						<Routes>
 							<Route path="/" element={<ContactListPage />} />
+							<Route path="/" element={<AddContact />} />
 							{/* <Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} /> */}
 							<Route path="*" element={<h1>Not found!</h1>} />
