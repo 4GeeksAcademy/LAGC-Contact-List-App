@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import ContactListPage from "./pages/ContactListPage.jsx";
 import AddContact from "./pages/AddContact.jsx";
+import EditContact from "./pages/EditContact.jsx";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -24,6 +25,7 @@ const Layout = () => {
 						<Routes>
 							<Route path="/" element={<ContactListPage />} />
 							<Route path="/addcontact" element={<AddContact />} />
+							<Route path="/EditContact" element={<EditContact />} />
 							{/* <Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} /> */}
 							<Route path="*" element={<h1>Not found!</h1>} />
