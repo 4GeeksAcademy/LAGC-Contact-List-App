@@ -7,7 +7,7 @@ import AddContact from "./pages/AddContact.jsx";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
-import ContextProvider from "./Context/Provider.jsx";
+
 
 //create your first component
 const Layout = () => {
@@ -18,19 +18,19 @@ const Layout = () => {
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
-				<ContextProvider>
+				
 					<ScrollToTop>
 						<Navbar />
 						<Routes>
 							<Route path="/" element={<ContactListPage />} />
-							<Route path="/" element={<AddContact />} />
+							<Route path="/addcontact" element={<AddContact />} />
 							{/* <Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} /> */}
 							<Route path="*" element={<h1>Not found!</h1>} />
 						</Routes>
 						<Footer />
 					</ScrollToTop>
-				</ContextProvider>
+				
 			</BrowserRouter>
 		</div>
 	);

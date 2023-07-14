@@ -18,7 +18,7 @@
     justify-content: space-between;
     margin-left: 60px;
     margin-right: 60px;
-    Shadow: '1px 2px 9px #F4AAB9';
+    
     border-radius: 10px;
 }
 .imageinfo{
@@ -43,4 +43,10 @@
     justify-content: right;
     margin: 20px;
     size: 20px;
+}
+
+.containeraddcontact{
+    display: flex;
+    border: solid lightgray 1 px;
+    border-radius: 10px;
 }

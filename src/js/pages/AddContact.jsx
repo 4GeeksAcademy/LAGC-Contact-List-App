@@ -1,22 +1,41 @@
-import React,{useContext} from "react";
+import React,{useContext, useState} from "react";
 import { Context } from "../Context/Provider.jsx";
 import { contactListActions } from '../Context/actions/ContactListActions.js'
+import ContactListPage from "./ContactListPage.jsx";
+import { useNavigate } from "react-router-dom";
+import { useContactList } from "../useContactList.js";
 
-export default function addContact() {
 
+export default function AddContact() {
+    //const { state, dispatch } = useContext(Context);
+    const state=useContactList();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [address, setAddress] = useState("");
+    const navigate = useNavigate();
+    
     return (
-        <div>
+        
+        <div className="containeraddcontact" >
+               
             <h1>Add a new Contact</h1>
         <label>Full Name</label>
-        <input type="text" name="name"/>
+        <input value={name} onChange={(ev) => { setName(ev.target.value) }} />
         <label>Email</label>
-        <input type="text" name="email"/>
+        <input value={email} onChange={(ev) => { setEmail(ev.target.value) }} />
         <label>Phone</label>
-        <input type="text" name="Phone"/>
+        <input value={phone} onChange={(ev) => { setPhone(ev.target.value) }} />
         <label>Address</label>
-        <input type="text" name="address"/>
-        <button onClick={() => dispatch(contactListActions.ADD_CONTACT({ name: {name}}))}>Add test contact</button>
-        {/*<button onClick={() => dispatch(contactListActions.ADD_CONTACT({ name: 'added something else' }))}>Add test contact</button>*/}
+        <input value={address} onChange={(ev) => { setAddress(ev.target.value) }} />   
+
+        <button className="addbotom btn btn-success" onClick={() =>{
+            state.addContact({name,email,phone,address });
+            navigate("/");
+        }}>Add test contact</button>
+        
+        
+
         </div>
 
 

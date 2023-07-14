@@ -3,22 +3,24 @@ import { Context } from '../Context/Provider.jsx'
 import {Link} from 'react-router-dom'
 
 import { contactListActions } from '../Context/actions/ContactListActions.js'
-import addContact from './AddContact.jsx';
+import AddContact from './AddContact.jsx';
 
 import { AiFillPhone, AiFillMail, AiFillCaretRight,AiFillEdit,AiFillDelete } from 'react-icons/ai';
 import { FaLocationArrow  } from 'react-icons/fa';
+import { useContactList } from '../useContactList.js';
 
 export default function ContactListPage() {
 
 
-    const { state, dispatch } = useContext(Context);
+    //const { state, dispatch } = useContext(Context);
+    const state=useContactList();
 
     return (
         <div>
             <h1>Contact List Page</h1>
-            <Link to="/addcontact.jsx">
-            {/* <button onClick={addContact.dispatch}>Add test contact</button> */}
-            <button className='addbotom btn btn-success' onClick={() => dispatch(contactListActions.ADD_CONTACT({ name: 'added something else' }))}>Add test contact</button>
+            <Link to="/addcontact">
+            {/* <button className='addbotom btn btn-success' onClick={() => dispatch(contactListActions.ADD_CONTACT({ name: 'added something else' }))}>Add test contact</button> */}
+            <button className='addbotom btn btn-success' >Add test contact</button>
             </Link>
             {state.contacts.map((contact) => (
                 <div key={state} id="contact" className="contact">
@@ -36,7 +38,8 @@ export default function ContactListPage() {
                         </div>
                         </div>
                         <div  className='righthicon'>
-                            <AiFillEdit onClick={() => dispatch(contactListActions.ADD_CONTACT({ name: 'added something else' }))}/>
+                            
+                            
                             <AiFillDelete/>
                         </div>
                     

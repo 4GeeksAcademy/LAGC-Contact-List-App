@@ -10,9 +10,10 @@ export const contactListActions = {
     ADD_CONTACT: (data) => ({
         type: ADD_CONTACT,
         data
+        
     })
 
-
+   
     /*EDIT_CONTACT:(data)=>({
         type: EDIT_CONTACT,
         data
